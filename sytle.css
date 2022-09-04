@@ -1,0 +1,148 @@
+:root {
+  --blue: #0000ff;
+  --margenta: #993399;
+  --red: #dc4266;
+  --yellow: #ffff00;
+  --background: #808080;
+  --white: #ffffff;
+  --black: #000000;
+  --profile-photo-size: 120px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1,
+p,
+body,
+button {
+  margin: 0;
+}
+
+i {
+  font-size: 24px;
+}
+
+body {
+  background: var(--background);
+  color: var(--white);
+}
+
+/* o font-size: ele aumenta o tamanho das fontes */
+
+/* O margin 0 auto ele coloca os elemetos no centro ele equivale o MARGIN TOP: LEFT
+RIGTH, BOTTOM E LEFT OU MARGIN 100PX 30PX 100PX 200PX  */
+
+/* O 0 REPRESENTA A DISTÂNCIA QUE QUERO EM RELAÇÃO A PARTE DE CIMA E A PARTE DE BAIXO E O  */
+/* AUTO DEFINE O ESPAÇAMENTO ENTRE A DIREITA E ESQUERTA, RIGTH E LEFT  */
+
+main {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 0 15px;
+}
+/* o padding cria um espaçamento para dentro */
+/* O PHOTO CONTAINER FOI CRIADO PARA QUE A IMAGEM CONTIDA ALI SEJA AJUSTADA AO
+ TAMANHO DA div COM O USO DO overflow: hidden;
+/* QUE POSTERIORMENTE É AJUSTADA EM OUTRAS CLASSES, COMO MOSTRA A CLASSE .profile-photo CRIADA  */
+/* ABAIXO DE .photo-container */
+
+/* O USO DO DISPLAY FLEX ABAIXO  COLOCOU TODO SO ELEMENTO DENTRO DA  HEADER */
+/* UM EM CIMA DO OUTRO QUE FORAM A HEADER, DIV, SECTION E FOOTER  */
+
+header {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+.photo-container {
+  /* o uso do overflow faz com que a imagem por mais grande que  */
+  /* seja respeite o tamanho da div */
+  overflow: hidden;
+  width: var(--profile-photo-size);
+  height: var(--profile-photo-size);
+  border-radius: 100%;
+  border: 4px solid var(--yellow);
+}
+
+.ocupation {
+  margin-top: 5px;
+}
+/* O profile photo foi criado em uma classe separada no intuito para regular a largura da  */
+/* da imagem dentro da div, por isso foi criada outra CLASSE, foi preciso criar outra
+/* clsse pois o tamanho da dela na div não ficou adequado. */
+/* geralmente as imagens são trabalhadas com apenas larguras e a altura é ajustada  */
+/* automaticamente */
+/* o margin top negativo sobe a foto */
+
+.profile-photo {
+  margin-top: -1px;
+  width: var(--profile-photo-size);
+}
+
+section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link {
+  background: var(--red);
+  max-width: 270px;
+  width: 100%;
+  text-decoration: none;
+  color: var(--black);
+  margin-top: 30px;
+  height: 50px;
+  width: 100%;
+  max-width: 270px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 250ms;
+}
+
+.link:first-child {
+  margin-top: 0%;
+}
+/* A CONFIGURAÇÃO DE ALTURA COM O MAX-WIDTH FUNCIONA QUE NO MÁXIMO A IMAGEM FICARÁ  */
+/* A 250PX */
+/* JÁ SÓ O WIDTH PEDE QUE  IMAGEM FIQUE A 100% SEMPRE, POR ISSO É RECOMENDADO USAR OS  */
+/* DOIS COMO ACIMA. */
+
+/* margin-top é a distância entre o elemento e outro */
+
+.link:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+
+/* filter: brightness(1.2) da o brilho do botão link */
+/* transform: translate(-2px) da o efeito de jogar o botão para cima */
+
+.link i {
+  margin-right: 7px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.call-me {
+  text-align: center;
+}
+
+footer i {
+  margin-top: 15px;
+  color: var(--blue);
+}
